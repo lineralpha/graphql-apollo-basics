@@ -1,5 +1,6 @@
 {
   "name": "graphql-apollo-server",
+  "private": true,
   "version": "1.0.0",
   "description": "GraphQL Apollo Server",
   "main": "./dist/index.js",
@@ -8,7 +9,7 @@
     "codegen": "graphql-codegen --watch --config codegen.ts",
     "postbuild": "node copy-schema.js",
     "build": "tsc",
-    "dev": "concurrently \"npm run codegen\" \"nodemon --watch src --exec ts-node ./src/index.ts\"",
+    "dev": "concurrently \"npm run codegen\" \"nodemon --watch src --exec node --loader ts-node/esm ./src/index.ts\"",
     "start": "npm run build && node ./dist/index.js"
   },
   "author": "",
