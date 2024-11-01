@@ -1,0 +1,65 @@
+# schema-first design
+# define the schema first - based on exactly which data our downstream consumers
+# (e.g. client apps) will need.
+# the schema is the contract between the server nad any client asking for data.
+
+type Query {
+    books(search: BooksSearchInput = null): [Book!]!
+    book(isbn: ID!): Book
+    authors: [Author!]!
+    author(id: ID!): Author
+}
+
+type Book {
+    isbn: ID!
+    title: String!
+    summary: String
+    author: Author!
+    price: Float
+}
+
+type Author {
+    id: ID!
+    name: String!
+    bio: String
+    books: [Book!]!
+}
+
+input BooksSearchInput {
+    # search in the book title and summary fields for match of the keyword.
+    keyWord: String
+    author: String
+}
+
+input AddBookInput {
+    isbn: ID!
+    title: String!
+    author_id: ID!
+    summary: String
+}
+
+input EditBookInput {
+    title: String
+    summary: String
+}
+
+input AddAuthorInput {
+    name: String!
+    bio: String
+}
+
+input EditAuthorInput {
+    name: String
+    bio: String
+}
+
+type AddBookMutationResponse {
+    code: String!
+    success: Boolean!
+    message: String!
+    book: Book
+}
+
+type Mutation {
+    addBook(book: AddBookInput!): AddBookMutationResponse!
+}

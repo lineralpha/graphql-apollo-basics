@@ -1,0 +1,19 @@
+# .gitignore pattern format:
+#  https://git-scm.com/docs/gitignore#_pattern_format
+#  '/' at line beginning or middle of the pattern, the pattern is relative to
+#      the directory of the .gitignore file itself.
+#  trailing '/' means the pattern match only directory.
+#  patterns with no trailing '/' can match both files and directories.
+
+# compile/build generated folders
+dist/
+node_modules/
+__generated__/
+
+# these files may contain sensitive data (secrets, API keys, or database connection info)
+.env
+.env.local
+.env.*.local
+
+# typescript cache
+*.tsbuildinfo
