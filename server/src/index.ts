@@ -21,7 +21,7 @@ const server = new ApolloServer({
 
 const { url } = await startStandaloneServer(server, {
     listen: {
-        port: 4000
+        port: Number(process.env.PORT) || 4000
     },
     // We are using a static data set for this example, but normally
     // this would be where you'd add your data source connections,
