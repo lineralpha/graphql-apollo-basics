@@ -5,7 +5,7 @@ const config: CodegenConfig = {
   overwrite: true,
   schema: "./src/schema.graphql",
   "require": [
-    // Use ts-node as runtime TypeScript transpiler. 
+    // Use ts-node as runtime TypeScript transpiler.
     "ts-node/register"
   ],
   generates: {
@@ -20,7 +20,7 @@ const config: CodegenConfig = {
         // for all of resolvers.
         // This file path starts from the location of the file
         // where you generate types (i.e., `./src/__generated__/resolver-types.ts` above)
-        contextType: "../resolvers#MyContext",
+        contextType: "../context#MyContext",
         mappers: {
             // mapping between graphql types and data model types
             // Book: "./models/book#BookModel"

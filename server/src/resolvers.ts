@@ -1,11 +1,15 @@
-import { AddAuthorInput, AddBookInput, Book, BooksSearchInput, MutationAddBookArgs, QueryAuthorArgs, QueryBookArgs, QueryBooksArgs, Resolvers } from "./__generated__/resolver-types";
-import { BookDataSource } from "./dataSources.js";
-
-export interface MyContext {
-    dataSource: {
-        booksAPI: BookDataSource
-    };
-}
+import {
+    AddAuthorInput,
+    AddBookInput,
+    Book,
+    BooksSearchInput,
+    MutationAddBookArgs,
+    QueryAuthorArgs,
+    QueryBookArgs,
+    QueryBooksArgs,
+    Resolvers
+} from "./__generated__/resolver-types";
+import { MyContext } from "./context";
 
 export const resolvers = {
     Query: {
