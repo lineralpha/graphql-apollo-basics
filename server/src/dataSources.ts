@@ -7,7 +7,7 @@ import type {
     BooksSearchInput,
     EditAuthorInput,
     EditBookInput
-} from "./__generated__/resolver-types";
+} from "./__generated__/resolver-types.js";
 
 export class BookDataSource {
     async getBooks(search?: BooksSearchInput | null) {
@@ -44,7 +44,9 @@ export class BookDataSource {
             isbn: input.isbn,
             title: input.title,
             author_id: input.author_id,
-            summary: input.summary ?? ""
+            summary: input.summary ?? "",
+            price: 0,
+            url: ""
          };
 
         db.books.push(book);

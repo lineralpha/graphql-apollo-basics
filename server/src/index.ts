@@ -1,6 +1,6 @@
 import { ApolloServer } from "@apollo/server";
 import { startStandaloneServer } from "@apollo/server/standalone";
-import { BookDataSource } from "./datasources.js";
+import { BookDataSource } from "./dataSources.js";
 import { resolvers } from "./resolvers.js";
 
 import fs from "fs";

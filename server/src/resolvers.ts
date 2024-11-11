@@ -1,5 +1,5 @@
 import { AddAuthorInput, AddBookInput, Book, BooksSearchInput, MutationAddBookArgs, QueryAuthorArgs, QueryBookArgs, QueryBooksArgs, Resolvers } from "./__generated__/resolver-types";
-import { BookDataSource } from "./datasources.js";
+import { BookDataSource } from "./dataSources.js";
 
 export interface MyContext {
     dataSource: {
