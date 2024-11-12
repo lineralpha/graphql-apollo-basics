@@ -1,9 +1,12 @@
 
 import type { CodegenConfig } from '@graphql-codegen/cli';
 
+const schema_url = `http://localhost:${process.env.PORT || 4000}`;
+console.log("schema endpoint url:", schema_url);
+
 const config: CodegenConfig = {
   overwrite: true,
-  schema: "http://localhost:4000",
+  schema: schema_url,
   documents: "src/**/*.tsx",
   ignoreNoDocuments: true,
   generates: {

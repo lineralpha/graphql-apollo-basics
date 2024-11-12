@@ -16,13 +16,27 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1 className='text-primary'>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+        <button
+          onClick={() => setCount((count) => count + 1)}
+          className='btn btn-lg btn-success'
+        >
           count is {count}
         </button>
         <p>
           Edit <code>src/pages/App.tsx</code> and save to test HMR
+        </p>
+      </div>
+      <div
+        className='alert alert-primary'
+        role='alert'
+      >
+        <p style={{ display: "none"}} className='d-block'>
+          Bootstrap is now successfully installed 😃
+        </p>
+        <p className='d-none'>
+          Bootstrap is not installed if you can see this 😢
         </p>
       </div>
       <p className="read-the-docs">

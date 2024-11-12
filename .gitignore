@@ -5,6 +5,9 @@
 #  trailing '/' means the pattern match only directory.
 #  patterns with no trailing '/' can match both files and directories.
 
+.vscode/*
+!.vscode/extensions.json
+
 # compile/build generated folders
 dist/
 node_modules/

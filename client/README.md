@@ -1,5 +1,15 @@
 # React + TypeScript + Vite
 
+## Getting started
+
+Command to create this project
+```sh
+# init the project
+npm create vite@latest
+# grpahpl-codegen
+npx graphql-code-generator init
+```
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
